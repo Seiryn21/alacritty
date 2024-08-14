@@ -366,7 +366,9 @@ impl RenderableCell {
         if bg == Color::Named(NamedColor::Background) {
             0.
         } else if config.colors.transparent_background_colors {
-            config.window_opacity()
+            config.window.background_colors_opacity
+                .unwrap_or(config.window.opacity)
+                .as_f32()
         } else {
             1.
         }

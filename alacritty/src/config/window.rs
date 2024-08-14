@@ -52,6 +52,9 @@ pub struct WindowConfig {
     /// Background opacity from 0.0 to 1.0.
     pub opacity: Percentage,
 
+    /// Cell background opacity from 0.0 to 1.0.
+    pub background_colors_opacity: Option<Percentage>,
+
     /// Pixel padding.
     padding: Delta<u8>,
 
@@ -72,6 +75,7 @@ impl Default for WindowConfig {
             dynamic_padding: Default::default(),
             identity: Identity::default(),
             opacity: Default::default(),
+            background_colors_opacity: Default::default(),
             padding: Default::default(),
             dimensions: Default::default(),
         }
